@@ -1,11 +1,4 @@
-import type { Config } from "tailwindcss";
-const config: Config = {
-  darkMode: ["class"],
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
-  theme: { extend: {
-    fontFamily: { sans: ["Inter","ui-sans-serif","system-ui","Noto Sans Devanagari"], devanagari: ["Noto Sans Devanagari","Inter","sans-serif"] },
-    boxShadow: { glow: "0 18px 44px rgba(99,69,236,.24)", soft: "0 18px 48px rgba(52,44,132,.13)" }
-  }},
-  plugins: []
-};
-export default config;
+import { type NextRequest } from "next/server";
+import { updateSession } from "@/lib/supabase/middleware";
+export async function middleware(request: NextRequest) { return await updateSession(request); }
+export const config = { matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)"] };

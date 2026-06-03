@@ -1,1 +1,1 @@
-const nextConfig = {}; export default nextConfig;
+export default { plugins: { tailwindcss: {}, autoprefixer: {} } };
