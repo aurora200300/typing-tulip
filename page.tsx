@@ -1,0 +1,52 @@
+@tailwind base; @tailwind components; @tailwind utilities;
+:root{--text:#162052;--muted:#65709a;--glass:rgba(255,255,255,.76);--line:rgba(90,64,180,.18);--brand:#6138e8}
+.dark{--text:#f2f4ff;--muted:#aab2dc;--glass:rgba(20,24,55,.80);--line:rgba(255,255,255,.12)}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,"Noto Sans Devanagari",Arial,sans-serif;background:radial-gradient(circle at 12% 0%,rgba(142,104,255,.18),transparent 30%),linear-gradient(135deg,#faf8ff,#eef2ff)}
+.dark body{background:radial-gradient(circle at 12% 0%,rgba(142,104,255,.25),transparent 30%),linear-gradient(135deg,#070b1f,#121936)}
+.glass{background:var(--glass);border:1px solid var(--line);box-shadow:0 18px 48px rgba(52,44,132,.13);backdrop-filter:blur(18px)}
+.nepalHero{background:linear-gradient(90deg,rgba(58,31,179,.98),rgba(103,75,233,.80)),url("https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=1800&q=80") center/cover}
+.nepali{font-family:"Noto Sans Devanagari",Inter,system-ui,sans-serif}.key{min-height:45px;border-radius:12px;display:grid;place-items:center;font-weight:900;position:relative;box-shadow:inset 0 -4px 0 rgba(0,0,0,.07),0 10px 20px rgba(50,42,130,.10);border:1px solid rgba(80,63,160,.18);color:#151c47}.key small{position:absolute;left:8px;top:4px;font-size:10px;opacity:.6}
+.key-vowel{background:linear-gradient(180deg,#e7fbd8,#fff)}.key-consonant{background:linear-gradient(180deg,#dff0ff,#fff)}.key-matra{background:linear-gradient(180deg,#ffe3bf,#fff)}.key-symbol{background:linear-gradient(180deg,#efe4ff,#fff)}.key-wide{grid-column:span 2}.key-space{grid-column:span 5}.correctChar{background:rgba(22,163,74,.18);color:#15803d;border-radius:8px}.wrongChar{background:rgba(225,29,72,.18);color:#be123c;border-radius:8px}.currentChar{outline:2px solid #6d3deb;border-radius:8px}
+
+
+.keyboard-wrap {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.keyboard-row {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(54px, 1fr));
+  gap: 8px;
+  min-width: 980px;
+}
+
+.keyboard-row-compact {
+  display: grid;
+  grid-template-columns: repeat(14, minmax(42px, 1fr));
+  gap: 6px;
+  min-width: 720px;
+}
+
+.key-action {
+  background: linear-gradient(180deg, #f9f8ff, #ffffff);
+}
+
+.key-wide {
+  grid-column: span 2;
+}
+
+.key-space {
+  grid-column: span 5;
+}
+
+.nav-label {
+  white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+  .keyboard-row {
+    min-width: 880px;
+  }
+}
