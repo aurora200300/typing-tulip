@@ -1,5 +1,0 @@
-insert into public.lessons (title, title_ne, level, mode, content, difficulty, xp)
-values
-('Basic Nepali Words', 'आधारभूत नेपाली शब्दहरू', 1, 'words', 'समाज प्रयास विकास शिक्षा स्वास्थ्य संस्कृति कार्यक्रम', 'beginner', 100),
-('Sentence Practice Level 1', 'वाक्य अभ्यास स्तर १', 2, 'sentences', 'शिक्षा नै मानिसको सबैभन्दा ठूलो धन हो।', 'beginner', 150),
-('News Practice', 'समाचार अभ्यास', 4, 'news', 'नेपाल सरकारले डिजिटल सेवा विस्तार गर्ने योजना अघि बढाएको छ।', 'intermediate', 250);
